@@ -1,6 +1,6 @@
-class Turn{
-    constructor(){
+class Turn {
+  constructor() {
 
-    }
+  }
 }
 module.exports = Turn;
