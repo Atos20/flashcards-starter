@@ -19,6 +19,6 @@ class Turn {
   giveFeedback() {
     return this.card.correctAnswer === this.guess ? 'correct!' : 'incorrect!';
   }
-};
+}
 
 module.exports = Turn;
