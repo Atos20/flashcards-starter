@@ -5,54 +5,43 @@ const Turn = require('../src/Turns');
 
 describe('Turn', () => {
   let card;
-  let turn
+  let turn;
+  let turnTwo;
+
   beforeEach(function() {
-      card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-  });
+    card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    turnOne = new Turn('object', card);
+    turnTwo = new Turn('array', card);
+    });
 
   it('should be a function', () => {
-    const turn = new Turn();
-
     expect(Turn).to.be.a('function');
   });
 
   it('should be able to instantiate a Turn', () =>{
-    const turn = new Turn();
-
-    expect(turn).to.be.an.instanceof(Turn);
+    expect(turnOne).to.be.an.instanceof(Turn);
   });
 
   it('should be able to guess the answer', () => {
-    const turn = new Turn('object');
-
-    expect(turn.guess).to.equal('object');
+    expect(turnOne.guess).to.equal('object');
   });
 
   it('should be ble to able to instantiate a Card', () => {
-    const turn = new Turn('object', card);
-
-    expect(turn.card).to.deep.equal(card);
+    expect(turnOne.card).to.deep.equal(card);
   });
 
   it('should be able to return the user\'s guess',() => {
-    const turn = new Turn('object', card);
-    const guess = turn.returnGuess();
-
+    const guess = turnOne.returnGuess();
     expect(guess).to.equal('object');
   });
 
   it('should be able to return the current card',() => {
-    const turn = new Turn('object', card);
-    const turnCard = turn.returnCard();
-
+    const turnCard = turnOne.returnCard();
     expect(turnCard).to.deep.equal(card);
   });
 
   it('should be able to evaluate the user\'s guess',() => {
-    const turn = new Turn('object', card);
-    const turnTwo = new Turn('array', card)
-
-    const questionOne = turn.evaluateGuess();
+    const questionOne = turnOne.evaluateGuess();
     const questionTwo = turnTwo.evaluateGuess();
 
     expect(questionOne).to.equal(true);
@@ -60,10 +49,7 @@ describe('Turn', () => {
   });
 
   it('should be able to give a correct or incorrect statement',() => {
-    const turn = new Turn('object', card);
-    const turnTwo = new Turn('array', card)
-
-    const questionOne = turn.giveFeedback();
+    const questionOne = turnOne.giveFeedback();
     const questionTwo = turnTwo.giveFeedback();
 
     expect(questionOne).to.equal('correct!');
