@@ -1,5 +1,66 @@
 # FlashCards Starter Kit
 
+## Contributors
+
+  [Orlando Murcio](https://www.github.com/atos20)
+
+## Context
+
+The goal of this project is to being able to practice OOP while using the `mocha` framework in conjuction with the `chai` testing library to write the test first and then write the implementation class to pass each test.
+
+#### Technologies used:
+
+    * JavaScript
+    * Terminal
+    * GitHub
+
+## Challenges
+
+    * Atomic commits (capitalizing the first letter)
+    * Writting te test before the implementation
+    * Connectiong between classes
+    * Knowing where to instantiate the `game` class
+
+
+## Wins
+- Being able to work through the logic of the game
+- Make use of the testing librarie and run the implementation test using the terminal
+- Having a functional game using the terminal
+- Using the project board * issues, labels and tickets* to keep track of my progress
+
+## Future Goals
+
+  * Add timer to the project, so the user can know the length of the game
+  * Add another deckof cards
+
+## In Action
+
+  #### Take 1
+
+* Playing through the game using the terminal; the user runs the `node indes.js` comand which initializes the game. After the game has been initialized the user uses the key up or down to select the answer from the 3 possible questions. Once the user pick the answer the terminal responds with a written feedback of 'correct' or incorrect' depending ig the answers is righ or wrong. Once the user finish all the cards in the deck a message with the percentage of the correct answers is displayed announcing the end of the round
+
+  <img src="https://media.giphy.com/media/L13aZALsp8KdB8Wvlz/giphy.gif" alt="Playing through the game using hte terminal, the user runs the node indes.js comand which initializes the game. After the game is initializes the user uses the key up or down to select the answer from the 3 possible questions. Once the user pick the answer the terminal responds with a written feedback of 'correct' or incorrect' depending ig the answers is righ or wrong. Once the user finish all the cards in the deck a message with the percentage of the correct answers is displayed announcing the end of the round" height=auto width=75%/>
+
+
+## Project directions
+
+[FlashCards specifications](https://frontend.turing.io/projects/flash-cards.html)
+
+
+### Contribute to the project
+If you want to contribute
+
+>   - clone the repository to your computer `git clone <URL>`
+>   - cd into the repository `cd <repo-name>`
+>   - create a new branch with `git checkout -b <new branch name>`
+>   - open your text editor and add or remove functionalities to the site.
+>   - `git add` and `git commit -m "<your commit meessage>"` to save the changes to your local repository
+>   - `git push` your changes
+>   - create a new pull request!
+
+### Project Managers
+
+[???](https://github.com/)
 ## Fork This Repo
 
 On the top right corner of this page, click the **Fork** button.
@@ -24,11 +85,8 @@ Running `node index.js` from the root of your project should result in the follo
 
 ```bash
 Node server running on port 3000
+
 ```
-
-*Note that you will not need to you run your server until you are instantiating your `Game` class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via `npm test`.*
-
-
 ## Where to Add Your Code
 
 ### JavaScript
@@ -45,35 +103,3 @@ In the terminal, run:
 ```bash
 node index.js
 ```
-
-When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
-
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
-
----
-
-## Test Files Organization
-
-Similar to feature code, your test code needs to be put in a specific place for it to run successfully.
-
-**Put all of your test files in the `test` directory.** As a convention, all test filenames should end with `-test.js`. For instance: `Round-test.js`.
-
-## Running Your Tests
-
-Run your test suite using the command:
-
-```bash
-npm test
-```
-
-The test results will output to the terminal.
-
----
-
-## Linting Your Code
-
-Run the command in your terminal `npm run lint` to run the linter on your JavaScript code. There will be errors and warnings right from the start in this starter kit - the linter is still running successfully.
-
-Your linter will look at the JavaScript files you have within the `src` directory and the `test` directory. 
-
----
